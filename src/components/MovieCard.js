@@ -19,14 +19,15 @@ const MovieCard = ({
         <div
           className="float-div"
           style={{ backgroundImage: `url(${imageUrl})` }}
+          data-test-id="wrapperfloat"
         ></div>
-        <h1>{original_title}</h1>
+        <h1 data-test-id="wrappertitle">{original_title}</h1>
         <h4>Description:</h4>
-        <p className="description">{overview}</p>
-        <p className="popularity">
+        <p className="description" data-test-id="wrapperdescription">{overview}</p>
+        <p className="popularity" data-test-id="wrapperpopularity">
           Popularity: <em>{popularity}</em>
         </p>
-        <p className="release-date">
+        <p className="release-date" data-test-id="wrapperreleasedate">
           Release Date: <em>{release_date}</em>
         </p>
       </Link>

@@ -19,7 +19,10 @@ const HomePageScreen = () => {
       .then((res) => res.json())
       .then((res) => {
         if (res) {
-          setImageOfDay(res?.url)
+          if (res?.media_type !== 'video') {
+            setImageOfDay(res?.url)
+          }
+          console.log(res)
         } else {
           console.log(res)
         }

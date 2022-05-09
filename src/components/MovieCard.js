@@ -24,10 +24,10 @@ const MovieCard = ({
         <h4>Description:</h4>
         <p className="description">{overview}</p>
         <p className="popularity">
-          Popularity: <em>{popularityd}</em>
+          Popularity: <em>{popularity}</em>
         </p>
         <p className="release-date">
-          Release Date: <em>{release_dates}</em>
+          Release Date: <em>{release_date}</em>
         </p>
       </Link>
     </div>

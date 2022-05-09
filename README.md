@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, without changing the .env file which was intentionally left unignored for evaluation purposes, you can run:
 
 ### `npm start`
 
@@ -16,8 +16,10 @@ You may also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Before you run this command, ensure that you have edited the cypress.json file in the route directory and set the baseUrl property to the url your server has started. By default, it is set to http://localhost:3000 and this may change
+Also ensure you have a chrome browser to simulate the tests
+
+Sometimes you might get an error on verification.. Run npx cypress verify
 
 ### `npm run build`
 

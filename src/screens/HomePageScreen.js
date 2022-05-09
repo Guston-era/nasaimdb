@@ -81,13 +81,18 @@ const HomePageScreen = () => {
                 })}
               </div>
             </h1>
-            <img alt="Nasa" src={imageOfDay} className="cover-image" data-test-id="topimage" />
+            <img
+              alt="Nasa"
+              src={imageOfDay}
+              className="cover-image"
+              data-test-id="topimage"
+            />
           </>
         ) : (
           <img src={top} alt="loading" />
         )}
       </div>
-      <div className={!movies ? `div` : `grid-div`}>
+      <div className={!movies ? `div` : `grid-div`} data-test-id="bottomdiv">
         {movies ? (
           <>
             {movies.map((movie, key) => (

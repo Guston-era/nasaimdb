@@ -14,8 +14,8 @@ const MovieCard = ({
     ? `https://image.tmdb.org/t/p/original//${poster_path}`
     : '/gallery.png'
   return (
-    <div className="movie-wrapper">
-      <Link to={`movies/${id}`}>
+    <div className="movie-wrapper" data-test-id="moviewrapper">
+      <Link to={`movies/${id}`} data-test-id="wrapperlink">
         <div
           className="float-div"
           style={{ backgroundImage: `url(${imageUrl})` }}

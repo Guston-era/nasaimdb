@@ -19,7 +19,23 @@ describe('Home page rendering', () => {
   })
 
   // image exists
-  it('imagfe in top section renders correctly', () => {
+  it('image in top section renders correctly', () => {
     cy.get('[data-test-id=topimage]').should('exist')
+  })
+
+  // bottom div exists
+  it('the bottom section renders correctly', () => {
+    cy.get('[data-test-id=bottomdiv]').should('exist')
+  })
+    
+  // movie wrapper exists
+    it('There is atleast one movie wrapper in the bottom section', () => {
+    cy.get('[data-test-id=moviewrapper]').should('exist')
+  })
+  // each movie wrapper has a link inside it
+  it('each movie wrapper has a link inside it', () => {
+    cy.get('[data-test-id=moviewrapper]').each(() => {
+      cy.get('[data-test-id=wrapperlink]').should('exist')
+    })
   })
 })

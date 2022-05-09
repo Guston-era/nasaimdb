@@ -89,7 +89,7 @@ const HomePageScreen = () => {
             />
           </>
         ) : (
-          <img src={top} alt="loading" />
+          <img src={top} alt="loading" data-test-id="topimage" />
         )}
       </div>
       <div className={!movies ? `div` : `grid-div`} data-test-id="bottomdiv">

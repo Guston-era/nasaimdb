@@ -86,6 +86,34 @@ const MovieScreen = () => {
                   {movieDetails?.imdb_id}
                 </a>
               </h2>
+              <h2>
+                <strong>Budget: </strong>
+                {movieDetails?.budget || 'Unknown budget costs'}
+              </h2>
+              <h2>
+                <strong>Production Countries: </strong>
+              </h2>
+              <ul>
+                {movieDetails?.production_countries?.map((country, key) => (
+                  <li key={key}>{country.name}</li>
+                ))}
+              </ul>
+              <h2>
+                <strong>Genres: </strong>
+              </h2>
+              <ul>
+                {movieDetails?.genres?.map((genre, key) => (
+                  <li key={key}>{genre.name}</li>
+                ))}
+              </ul>
+              <h2>
+                <strong>Languages: </strong>
+              </h2>
+              <ul>
+                {movieDetails?.spoken_languages?.map((lang, key) => (
+                  <li key={key}>{lang.name}</li>
+                ))}
+              </ul>
             </div>
           ) : (
             <p>NotFound</p>

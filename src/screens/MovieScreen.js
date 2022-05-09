@@ -7,7 +7,9 @@ const MovieScreen = () => {
   const navigate = useNavigate()
   const [loading, setLoading] = useState(true)
   const [movieDetails, setMovieDetails] = useState(null)
+
   const url = `${process.env.REACT_APP_IMDBURLSINGLE}/${movieId}?api_key=${process.env.REACT_APP_IMDBAPIKEY}`
+  //  useEffect to load movie details
   useEffect(() => {
     fetch(url, {
       method: 'GET',

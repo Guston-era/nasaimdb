@@ -28,6 +28,7 @@
   padding: 20px;
   display: grid;
 }
+/* media queries */
 
 @media (min-width: 1200px) {
   .grid-div {

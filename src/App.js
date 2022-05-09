@@ -1,23 +1,16 @@
-
+import { Routes, Route } from 'react-router-dom'
+import HomePageScreen from './screens/HomePageScreen'
+import MovieScreen from './screens/MovieScreen'
+import NotFound from './screens/NotFound'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Routes>
+      <Route path="/" element={<HomePageScreen />} />
+      <Route path="movies/:movieId" element={<MovieScreen />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  )
 }
 
-export default App;
+export default App

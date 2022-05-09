@@ -66,11 +66,11 @@ const HomePageScreen = () => {
     // }
   }, [])
   return (
-    <div>
-      <div className="top-div">
+    <div data-test-id="homewrapper">
+      <div className="top-div" data-test-id="topdiv">
         {imageOfDay ? (
           <>
-            <h1 className="top-text">
+            <h1 className="top-text" data-test-id="toptext">
               <span>NASA: </span>Picture of the Day
               <div>
                 {new Date().toLocaleDateString('en-us', {
@@ -81,7 +81,7 @@ const HomePageScreen = () => {
                 })}
               </div>
             </h1>
-            <img alt="Nasa" src={imageOfDay} className="cover-image" />
+            <img alt="Nasa" src={imageOfDay} className="cover-image" data-test-id="topimage" />
           </>
         ) : (
           <img src={top} alt="loading" />

@@ -27,10 +27,12 @@ describe('Home page rendering', () => {
   it('the bottom section renders correctly', () => {
     cy.get('[data-test-id=bottomdiv]').should('exist')
   })
-    
-  // movie wrapper exists
-    it('There is atleast one movie wrapper in the bottom section', () => {
-    cy.get('[data-test-id=moviewrapper]').should('exist')
+
+  // 20 movie wrappers will load
+  it('20 wrapper divs exist', () => {
+    cy.get('[data-test-id=bottomdiv]')
+      .find('[data-test-id=moviewrapper]')
+      .should('have.length', 20)
   })
   // each movie wrapper has a link inside it
   it('each movie wrapper has a link inside it', () => {

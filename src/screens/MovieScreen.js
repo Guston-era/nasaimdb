@@ -56,7 +56,7 @@ const MovieScreen = () => {
                 alt="Poster for movie"
               />
               <h2>
-                <strong>Title: </strong> {movieDetails?.original_title}
+                <strong>Title: </strong> {movieDetails?.title}
               </h2>
               <h2>
                 <strong>Tagline: </strong>

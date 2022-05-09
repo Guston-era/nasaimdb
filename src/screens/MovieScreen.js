@@ -47,7 +47,7 @@ const MovieScreen = () => {
       ) : (
         <>
           {movieDetails ? (
-            <div className="wrapper">
+            <div className="wrapper" data-test-id="moviedetails">
               <img
                 src={
                   movieDetails?.poster_path
@@ -57,28 +57,28 @@ const MovieScreen = () => {
                 layout="responsive"
                 alt="Poster for movie"
               />
-              <h2>
+              <h2 data-test-id="moviedetailstitle">
                 <strong>Title: </strong> {movieDetails?.title}
               </h2>
-              <h2>
+              <h2 data-test-id="moviedetailstagline">
                 <strong>Tagline: </strong> {movieDetails?.tagline}
               </h2>
-              <h2>
+              <h2 data-test-id="moviedetailsoverview">
                 <strong>Overview: </strong>
                 {movieDetails?.overview}
               </h2>
-              <h2>
+              <h2 data-test-id="moviedetailsvotesaverage">
                 <strong>Vote Average: </strong>
                 {movieDetails?.vote_average}
               </h2>
-              <h2>
+              <h2 data-test-id="moviedetailsvotestotal">
                 <strong>Total Votes: </strong>
                 {movieDetails?.vote_count}
               </h2>
-              <h2>
+              <h2 data-test-id="moviedetailsstatus">
                 <strong>Status: </strong> {movieDetails?.status}
               </h2>
-              <h2>
+              <h2 data-test-id="moviedetailslink">
                 <strong>IMDB Link: </strong>
                 <a
                   href={`https://www.imdb.com/title/${movieDetails.imdb_id}`}
@@ -88,14 +88,14 @@ const MovieScreen = () => {
                   {movieDetails?.imdb_id}
                 </a>
               </h2>
-              <h2>
+              <h2 data-test-id="moviedetailsbudget">
                 <strong>Budget: </strong>
                 {movieDetails?.budget || 'Unknown budget costs'}
               </h2>
               <h2>
                 <strong>Production Countries: </strong>
               </h2>
-              <ul>
+              <ul data-test-id="moviedetailscountries">
                 {movieDetails?.production_countries?.map((country, key) => (
                   <li key={key}>{country.name}</li>
                 ))}
@@ -103,7 +103,7 @@ const MovieScreen = () => {
               <h2>
                 <strong>Genres: </strong>
               </h2>
-              <ul>
+              <ul data-test-id="moviedetailsgenres">
                 {movieDetails?.genres?.map((genre, key) => (
                   <li key={key}>{genre.name}</li>
                 ))}
@@ -111,7 +111,7 @@ const MovieScreen = () => {
               <h2>
                 <strong>Languages: </strong>
               </h2>
-              <ul>
+              <ul data-test-id="moviedetailslanguages">
                 {movieDetails?.spoken_languages?.map((lang, key) => (
                   <li key={key}>{lang.name}</li>
                 ))}

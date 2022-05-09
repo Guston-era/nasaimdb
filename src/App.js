@@ -8,7 +8,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePageScreen />} />
       <Route path="movies/:movieId" element={<MovieScreen />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path="*" element={<NotFound />} /> 
     </Routes>
   )
 }

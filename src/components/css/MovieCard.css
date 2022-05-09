@@ -41,3 +41,28 @@
 .movie-wrapper a:hover {
   text-decoration: underline rgb(255, 183, 3);
 }
+@media (min-width: 1200px) {
+  .movie-wrapper:nth-child(2n) {
+    margin-right: 20px !important;
+  }
+}
+@media (min-width: 1024px) {
+  .movie-wrapper:nth-child(3n) {
+    margin-right: 20px;
+  }
+  .movie-wrapper:nth-child(2n) {
+    margin-right: 20px;
+  }
+  .movie-wrapper h1 {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 768px) {
+  .movie-wrapper {
+    margin: 0px 20px 20px 0px;
+  }
+  .movie-wrapper:nth-child(2n) {
+    margin-right: 0px;
+  }
+}

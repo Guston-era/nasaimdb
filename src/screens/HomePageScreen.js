@@ -22,9 +22,7 @@ const HomePageScreen = () => {
           if (res?.media_type !== 'video') {
             setImageOfDay(res?.url)
           }
-          console.log(res)
-        } else {
-          console.log(res)
+          //   console.log(res)
         }
       })
       .catch((err) => {
@@ -50,11 +48,9 @@ const HomePageScreen = () => {
 
       .then((res) => {
         if (res) {
-          console.log(res, 'loaded')
+          //   console.log(res, 'loaded')
           // setImageOfDay(res?.url)
           setMovies(res?.results)
-        } else {
-          console.log(res)
         }
       })
       .catch((err) => {

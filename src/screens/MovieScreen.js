@@ -24,10 +24,10 @@ const MovieScreen = () => {
         if (res?.success === false) {
           navigate('/not-found')
 
-          console.log(res)
+          // console.log(res)
         } else {
           setMovieDetails(res)
-          console.log(res)
+          // console.log(res)
         }
       })
       .catch((err) => {

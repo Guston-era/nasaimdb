@@ -59,7 +59,7 @@ const MovieScreen = () => {
                 <strong>Title: </strong> {movieDetails?.title}
               </h2>
               <h2>
-                <strong>Tagline: </strong>
+                <strong>Tagline: </strong> {movieDetails?.tagline}
               </h2>
               <h2>
                 <strong>Overview: </strong>

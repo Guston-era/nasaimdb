@@ -87,16 +87,13 @@ describe('Home page rendering', () => {
   })
 })
 // functionality
-// describe('Clicking on a movie', () => {
-//      it('Can View movie details', () => {
-
-//     cy.get('[data-test-id=moviewrapper]')
-//       .first()
-//       .click()
-//       .then(() => {
-//         cy.get('.add_sub_task').first().type(`${subTask}`)
-//         cy.get('.add_sub_task_button').first().click()
-//         cy.get('.subtask').first().should('have.length.greaterThan', 0)
-//       })
-//   })
-// })
+describe('Clicking on a movie renders the details section', () => {
+  it('Can View movie details', () => {
+    cy.get('[data-test-id=moviewrapper]')
+      .first()
+      .click()
+      .then(() => {
+        cy.get('[data-test-id=moviedetails]').should('exist')
+      })
+  })
+})
